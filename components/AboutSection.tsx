@@ -51,7 +51,7 @@ const AboutSection = () => {
 
           <p>
             FEIN AI is on a mission to simplify and supercharge your finances using cutting-edge AI.
-            From smart budgeting to personalized investment advice — we're building the future of financial intelligence.
+            From smart budgeting to personalized investment advice — we&apos;re building the future of financial intelligence.
           </p>
 
           <motion.div
@@ -98,7 +98,7 @@ const AboutSection = () => {
               💡 Join the waitlist and stay ahead.
             </p>
             <p className="mt-4">
-              We're almost ready — and trust us, it'll be worth it.
+              We&apos;re almost ready — and trust us, it&apos;ll be worth it.
             </p>
           </motion.div>
         </motion.div>

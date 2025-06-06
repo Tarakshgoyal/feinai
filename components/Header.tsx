@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -23,9 +24,9 @@ const Header = () => {
           </motion.div>
           
           <nav className="hidden md:flex space-x-8">
-            <a href="#about" className="hover:text-waiting-text/80 transition-colors">About</a>
-            <a href="#features" className="hover:text-waiting-text/80 transition-colors">Features</a>
-            <a href="#survey" className="hover:text-waiting-text/80 transition-colors">Survey</a>
+            <Link href="#about" className="hover:text-waiting-text/80 transition-colors">About</Link>
+            <Link href="#features" className="hover:text-waiting-text/80 transition-colors">Features</Link>
+            <Link href="#survey" className="hover:text-waiting-text/80 transition-colors">Survey</Link>
           </nav>
         </div>
       </div>

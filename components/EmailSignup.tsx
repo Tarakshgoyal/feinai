@@ -29,6 +29,7 @@ const EmailSignup = () => {
         description: "You've been added to our waitlist.",
       });
     } catch (error) {
+      console.log('Error submitting email:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
@@ -110,7 +111,7 @@ const EmailSignup = () => {
           <DialogHeader>
             <DialogTitle className="text-2xl text-center">🎉 Congratulations!</DialogTitle>
             <DialogDescription className="text-waiting-text/80 text-center">
-              You've successfully joined our waitlist! We'll notify you as soon as FEIN AI is ready to revolutionize your financial journey.
+              You&apos;ve successfully joined our waitlist! We&apos;ll notify you as soon as FEIN AI is ready to revolutionize your financial journey.
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

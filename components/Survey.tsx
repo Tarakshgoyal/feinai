@@ -29,6 +29,7 @@ const Survey = () => {
         description: "Your feedback helps us build a better product.",
       });
     } catch (error) {
+      console.log('Error submitting survey:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
@@ -69,7 +70,7 @@ const Survey = () => {
             <CardHeader className="text-center">
               <CardTitle className="text-3xl text-waiting-text text-[#ddf1a5]">Help Us Build Better</CardTitle>
               <p className="text-waiting-text/80 text-[#ddf1a5]">
-                Answer a few quick questions to help shape FEIN AI's features.
+                Answer a few quick questions to help shape FEIN AI&apos;s features.
               </p>
             </CardHeader>
             <CardContent>
@@ -93,7 +94,7 @@ const Survey = () => {
 
                 <div>
                   <label className="block text-waiting-text text-[#ddf1a5] mb-2 font-medium">
-                    What's your primary financial goal?
+                    What&apos;s your primary financial goal?
                   </label>
                   <select
                     {...register('primaryGoal', { required: true })}
