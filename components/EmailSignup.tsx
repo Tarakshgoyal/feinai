@@ -35,7 +35,7 @@ const EmailSignup = () => {
 
       if (res_json["status"] != "ok")
       {
-        var error_text = "Something went wrong. Please try again.";
+        let error_text = "Something went wrong. Please try again.";
 
         if ("error" in res_json) {
           error_text = res_json["error"];
@@ -60,6 +60,7 @@ const EmailSignup = () => {
         description: "You've been added to our waitlist.",
       });
     } catch (error) {
+      console.log('Error submitting email:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
