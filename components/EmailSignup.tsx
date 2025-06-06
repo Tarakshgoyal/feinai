@@ -21,6 +21,37 @@ const EmailSignup = () => {
 
   const onSubmit = async (data: EmailForm) => {
     try {
+      const res = await fetch("http://localhost:80/api/v1/join-waitlist/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: data.email
+        })
+      });
+
+      const res_json = await res.json();
+
+      if (res_json["status"] != "ok")
+      {
+        var error_text = "Something went wrong. Please try again.";
+
+        if ("error" in res_json) {
+          error_text = res_json["error"];
+        }
+
+        console.log(error_text)
+
+        toast({
+          title: "Error",
+          description: error_text,
+          variant: "destructive",
+        });
+
+        return
+      }
+
       console.log('Email submitted:', data.email);
       setShowSuccess(true);
       reset();
@@ -29,7 +60,6 @@ const EmailSignup = () => {
         description: "You've been added to our waitlist.",
       });
     } catch (error) {
-      console.log('Error submitting email:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
