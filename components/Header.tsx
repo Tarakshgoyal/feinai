@@ -24,9 +24,9 @@ const Header = () => {
           </motion.div>
           
           <nav className="hidden md:flex space-x-8">
-            <Link href="#about" className="hover:text-waiting-text/80 transition-colors">About</Link>
-            <Link href="#features" className="hover:text-waiting-text/80 transition-colors">Features</Link>
-            <Link href="#survey" className="hover:text-waiting-text/80 transition-colors">Survey</Link>
+            <Link href="/#about" className="hover:text-waiting-text/80 transition-colors">About</Link>
+            <Link href="/#features" className="hover:text-waiting-text/80 transition-colors">Features</Link>
+            <Link href="/#survey" className="hover:text-waiting-text/80 transition-colors">Survey</Link>
           </nav>
         </div>
       </div>
