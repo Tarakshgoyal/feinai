@@ -198,6 +198,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               { number: "9+", label: "Risk Factors Analyzed" },
+              { number: "9+", label: "Risk Factors Analyzed" },
               { number: "7", label: "Key Financial Ratios" },
               { number: "5", label: "Investment Profiles" }
             ].map((stat, index) => (

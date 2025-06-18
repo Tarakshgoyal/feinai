@@ -62,7 +62,7 @@ const AboutSection = () => {
             className="border-t border-waiting-text/20 pt-8 mt-8"
           >
             <h3 className="text-2xl font-semibold mb-6 flex items-center justify-center">
-              🔒 Be the First to Experience:
+               Be the First to Experience:
             </h3>
 
             <ul className="space-y-4 text-left max-w-2xl mx-auto">
@@ -95,7 +95,7 @@ const AboutSection = () => {
             className="border-t border-waiting-text/20 pt-8 mt-8"
           >
             <p className="text-xl flex items-center justify-center">
-              💡 Join the waitlist and stay ahead.
+               Join the waitlist and stay ahead.
             </p>
             <p className="mt-4">
               We&apos;re almost ready — and trust us, it&apos;ll be worth it.
