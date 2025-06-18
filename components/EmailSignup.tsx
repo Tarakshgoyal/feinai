@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import { useRouter } from 'next/navigation';
 
 interface EmailForm {
   email: string;
@@ -18,6 +19,7 @@ const EmailSignup = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<EmailForm>();
   const { toast } = useToast();
+  const router=useRouter();
 
   const onSubmit = async (data: EmailForm) => {
     try {
@@ -59,6 +61,7 @@ const EmailSignup = () => {
         title: "Success!",
         description: "You've been added to our waitlist.",
       });
+      router.push('/finance')
     } catch (error) {
       console.log('Error submitting email:', error);
       toast({
