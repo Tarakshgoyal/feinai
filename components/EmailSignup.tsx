@@ -69,6 +69,7 @@ const EmailSignup = () => {
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
+      router.push('/finance')
     }
   };
 
