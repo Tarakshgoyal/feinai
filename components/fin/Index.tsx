@@ -195,9 +195,9 @@ const Index = () => {
             Comprehensive Analysis Features
           </motion.h3>
 
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "9+", label: "Risk Factors Analyzed" },
+              { number: "500+", label: "Satisfied Users" },
               { number: "9+", label: "Risk Factors Analyzed" },
               { number: "7", label: "Key Financial Ratios" },
               { number: "5", label: "Investment Profiles" }
@@ -219,7 +219,7 @@ const Index = () => {
 
         {/* Call to Action */}
         <motion.div variants={itemVariants} className="text-center mt-16">
-          <motion.p className="text-xl mb-8 opacity-90">Take control of your financial future today</motion.p>
+          <motion.p className="text-xl mb-8 opacity-90">If you want to take financial health analyser test you can take it</motion.p>
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Button
               onClick={() => setShowEmailModal(true)}

@@ -59,7 +59,7 @@ const AboutSection = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ duration: 0.8 }}
-            className="border-t border-waiting-text/20 pt-8 mt-8"
+            className=" border-waiting-text/20 pt-8 mt-8"
           >
             <h3 className="text-2xl font-semibold mb-6 flex items-center justify-center">
                Be the First to Experience:
@@ -92,7 +92,7 @@ const AboutSection = () => {
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             transition={{ duration: 0.8 }}
-            className="border-t border-waiting-text/20 pt-8 mt-8"
+            className=" border-waiting-text/20 pt-8 mt-8"
           >
             <p className="text-xl flex items-center justify-center">
                Join the waitlist and stay ahead.

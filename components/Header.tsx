@@ -18,7 +18,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-30 h-10  flex items-center justify-center">
+            <div className="w-10 h-10  flex items-center justify-center">
               <Image src={'/logoo.svg'}  alt={''} width={20} height={20} className='w-17'/>
             </div>
           </motion.div>
