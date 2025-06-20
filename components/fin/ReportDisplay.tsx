@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+// import { Progress } from '@/components/ui/progress';
 import { ArrowLeft, TrendingUp, AlertTriangle, Target, Shield, Zap } from 'lucide-react';
 
 interface ReportData {
@@ -167,7 +167,7 @@ const ReportDisplay: React.FC<ReportDisplayProps> = ({ data, onBack }) => {
                 </div>
                 <div className="text-lg text-white opacity-80">{riskProfile.capacity} Risk Capacity</div>
               </div>
-              <Progress value={riskScore} className="h-3" />
+              {/* <Progress value={riskScore} className="h-3" /> */}
             </CardContent>
           </Card>
         </motion.div>

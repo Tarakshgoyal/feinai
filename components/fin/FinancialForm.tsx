@@ -103,10 +103,10 @@ const FinancialForm: React.FC<FinancialFormProps> = ({ onSubmit, onBack }) => {
   const handlePrevious = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
-    }
+    }//
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Convert string values to appropriate types
     const processedData = {
       ...formData,
@@ -126,6 +126,30 @@ const FinancialForm: React.FC<FinancialFormProps> = ({ onSubmit, onBack }) => {
       high_risk_percent: parseInt(formData.high_risk_percent),
       confidence: parseInt(formData.confidence),
     };
+    try {
+    const response = await fetch('http://localhost:80/api/v1/save_preferences/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Server error:', errorData);
+      alert('Failed to submit preferences. Please try again.');
+      return;
+    }
+
+    const data = await response.json();
+    console.log('Submission successful:', data);
+    onSubmit(processedData); // Still call parent onSubmit if needed
+  } catch (error) {
+    console.error('Request failed:', error);
+    alert('Failed to connect to server.');
+  }
+
     onSubmit(processedData);
   };
 
