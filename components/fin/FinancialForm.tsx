@@ -127,22 +127,20 @@ const FinancialForm: React.FC<FinancialFormProps> = ({ onSubmit, onBack }) => {
       confidence: parseInt(formData.confidence),
     };
     try {
-    const response = await fetch('http://localhost:80/api/v1/save_preferences/', {
+    const response = await fetch('https://api.fein-ai.com/v1/save-preferences', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
-
-    if (!response.ok) {
+    const data = await response.json();
+    if (data['status'] != "ok") {
       const errorData = await response.json();
       console.error('Server error:', errorData);
       alert('Failed to submit preferences. Please try again.');
       return;
     }
-
-    const data = await response.json();
     console.log('Submission successful:', data);
     onSubmit(processedData); // Still call parent onSubmit if needed
   } catch (error) {

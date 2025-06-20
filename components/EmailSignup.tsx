@@ -23,7 +23,7 @@ const EmailSignup = () => {
 
   const onSubmit = async (data: EmailForm) => {
     try {
-      const res = await fetch("http://localhost:80/api/v1/join-waitlist/", {
+      const res = await fetch("https://api.fein-ai.com/v1/join-waitlist/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -69,7 +69,6 @@ const EmailSignup = () => {
         description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
-      router.push('/finance')
     }
   };
 
