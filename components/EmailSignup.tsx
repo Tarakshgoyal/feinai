@@ -61,7 +61,7 @@ const EmailSignup = () => {
         title: "Success!",
         description: "You've been added to our waitlist.",
       });
-      router.push('/finance')
+      //router.push('/finance')
     } catch (error) {
       console.log('Error submitting email:', error);
       toast({
