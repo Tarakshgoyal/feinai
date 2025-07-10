@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 interface EmailForm {
   email: string;
@@ -19,7 +19,7 @@ const EmailSignup = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<EmailForm>();
   const { toast } = useToast();
-  const router=useRouter();
+  // const router=useRouter();
 
   const onSubmit = async (data: EmailForm) => {
     try {
